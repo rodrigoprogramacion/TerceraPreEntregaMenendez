@@ -1,0 +1,29 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+
+{% block content %}
+<body>
+    <p>Articulo Buscado: {{query}}</p>
+
+    {% if articulos %}
+
+    <p>Articulos encontrados: {{articulos|length}} articulos</p>
+
+        <ul>
+            {% for articulo in articulos %}
+            <li>
+                Nombre: {{articulo.nombreProducto}} &nbsp; Codigo: {{articulo.codigoProducto}} &nbsp; Precio: {{articulo.precioProducto}}
+
+            </li>
+        {% endfor %}
+
+        </ul>
+    {% else %}
+
+        <p>No se ha encontrado ningun articulo con ese nombre!</p>
+
+    {% endif %}
+</body>
+{% endblock %}

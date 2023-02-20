@@ -1,0 +1,31 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+    {% if miFormulario.errors %}
+
+    <p style="color: red;"> Estan mal los datos </p>
+
+    {% endif %}
+    <p>
+    <h2>Cargar productos</h2>
+    <form action="" method="POST">
+        {% csrf_token %}  
+
+        <table>
+           
+            {{ miFormulario.as_table }}
+
+        </table>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+  
+    </p>
+
+
+{% endblock %}

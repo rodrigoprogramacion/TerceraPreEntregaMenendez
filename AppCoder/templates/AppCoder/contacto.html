@@ -1,0 +1,30 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+{% if miFormularioContacto.errors %}
+
+    <p style="color: red;"> Estan mal los datos </p>
+
+    {% endif %}
+        <p>
+          <h2>Contactenos</h2>
+            <form action="" method="POST">
+              {% csrf_token %}
+
+                <table>
+
+                 {{miFormularioContacto.as_table}}
+
+                </table>
+
+             <input type="submit" value="Enviar">
+
+            </form>
+
+    </p>
+
+{% endblock %}
