@@ -12,6 +12,7 @@ urlpatterns = [
     path('busquedaProductos/', views.busquedaProductos, name='busquedaProductos'),
     path('busquedaProductos/buscar/', views.buscar, name='buscar'),
     
+        
     
     
     
