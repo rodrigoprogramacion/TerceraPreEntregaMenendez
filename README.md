@@ -1,4 +1,4 @@
-# TerceraPreEntregaMenendez
+# Entrega trabajo practico curso python-django
 AppWeb,
 Descargar archivo zip descomprimir, 
 Abrir carpeta en Visual sstudio code u otro editor,
